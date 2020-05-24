@@ -14,15 +14,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: process.env.API_URL || `http://localhost:1337`,
-        queryLimit: 1000,
-        contentTypes: [`blogs`],
-        singleTypes: [`faq`, `about-iyengar`]
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: process.env.API_URL || `http://localhost:1337`,
+    //     queryLimit: 1000,
+    //     contentTypes: [`blogs`],
+    //     singleTypes: [`faq`, `about-iyengar`]
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

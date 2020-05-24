@@ -12,7 +12,7 @@ const IyengarYoga = ({data: {strapiFaq: {body}}}) => {
       <br/>
       <div className="section-center">
       <article className="blog-content">
-      <ReactMarkdown source={body}/>
+      {/* <ReactMarkdown source={body}/> */}
       </article>
       </div>
       </section>
@@ -20,12 +20,12 @@ const IyengarYoga = ({data: {strapiFaq: {body}}}) => {
   )
 }
 
-export const query = graphql`
-  {
-    strapiFaq {
-      body
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     strapiFaq {
+//       body
+//     }
+//   }
+// `
 
 export default IyengarYoga
