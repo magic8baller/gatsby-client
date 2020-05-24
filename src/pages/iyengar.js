@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from 'components/Layout'
-import {graphql} from 'gatsby'
-import ReactMarkdown from 'react-markdown'
+import SEO from 'components/seo'
 
-const IyengarYoga = ({data}) => {
-console.log({data})
+const IyengarYoga = () => {
+
   return (
     <Layout>
+      <SEO title='about iyengar' description='brief introduction to iyengar yoga philosophies and class experience'/>
   <section className="blog-template">
       <div className="section-center">
       <h1>About Iyengar Yoga</h1>
