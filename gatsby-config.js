@@ -1,10 +1,20 @@
+// const { GOOGLE_API_KEY, GOOGLE_CAL_ID } = process.env
 module.exports = {
   siteMetadata: {
     title: `Yoga with Susan Turis`,
     description: `Personal website and blog for a certified Iyengar Yoga Teacher in Brooklyn, NYC`,
     author: `Leslie Turis`,
   },
+
   plugins: [
+  
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `susanturis`,
+      },
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
@@ -14,15 +24,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: process.env.API_URL || `http://localhost:1337`,
-    //     queryLimit: 1000,
-    //     contentTypes: [`blogs`],
-    //     singleTypes: [`faq`, `about-iyengar`]
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-ghost`,
+      options: {
+        apiUrl: `http://ghost.leslie.casa`,
+        contentApiKey: `adba6e8e1572b9aedda52efd4d`,
+        version: `v3`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

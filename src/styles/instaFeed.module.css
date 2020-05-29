@@ -1,0 +1,39 @@
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+.instagram-posts {
+	margin-top: 0.5rem;
+	background-color: rgb(187, 3, 3);
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+	color: white;
+	padding: 1rem;
+}
+
+.instagram-icon {
+	color: white;
+}
+
+.instagram-icon:hover {
+	text-decoration: none;
+}
+
+.instagram-icon:hover {
+	color: white;
+}
+
+@media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.instagram-posts {
+		margin-top: 1rem;
+		background-color: rgb(187, 3, 3);
+	}
+}
