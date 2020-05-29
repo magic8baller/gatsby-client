@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const useInstagram = () => {
   const data = useStaticQuery(graphql`
     query {
-      allInstaNode(limit: 12) {
+      allInstaNode(limit: 6) {
         nodes {
           id
           likes
@@ -13,8 +13,8 @@ const useInstagram = () => {
           username
           localFile {
             childImageSharp {
-              fixed(width: 200, height: 200) {
-                ...GatsbyImageSharpFixed
+              fluid {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -26,6 +26,7 @@ const useInstagram = () => {
   return data.allInstaNode.nodes.map(n => ({
     ...n.localFile.childImageSharp,
     id: n.id,
+    comments: n.comments,
     caption: n.caption,
     username: n.username,
     likes: n.likes
